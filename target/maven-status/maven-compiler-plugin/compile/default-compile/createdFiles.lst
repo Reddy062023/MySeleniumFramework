@@ -1,0 +1,8 @@
+com\mycompany\automation\pages\InventoryPage.class
+com\mycompany\automation\pages\LoginPage.class
+com\mycompany\automation\utils\CSVReader.class
+com\mycompany\automation\utils\ConfigReader.class
+com\mycompany\automation\utils\LocatorsReader.class
+com\mycompany\automation\factory\DriverFactory.class
+com\mycompany\automation\utils\ScreenshotUtil.class
+com\mycompany\automation\pages\DemoQAPage.class
