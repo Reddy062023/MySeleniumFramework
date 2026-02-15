@@ -16,6 +16,7 @@
             <class name="com.mycompany.automation.tests.MultipleWindowTest"/>
             <class name="com.mycompany.automation.tests.WaitTest"/>
             <class name="com.mycompany.automation.tests.WebTableTest"/>
+            <class name="com.mycompany.automation.tests.APIInvalidStatusTest"/>
         </classes>
     </test>
 

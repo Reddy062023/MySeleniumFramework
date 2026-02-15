@@ -3,6 +3,7 @@ com\mycompany\automation\tests\MultipleWindowTest.class
 com\mycompany\automation\tests\APITest.class
 com\mycompany\automation\tests\LoginTest.class
 com\mycompany\automation\tests\WebTableTest.class
+com\mycompany\automation\tests\APIInvalidStatusTest.class
 com\mycompany\automation\tests\WaitTest.class
 com\mycompany\automation\tests\DragDropTest.class
 com\mycompany\automation\tests\LogoTest.class
