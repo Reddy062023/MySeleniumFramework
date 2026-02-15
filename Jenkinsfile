@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/YourRepo.git'
+                git branch: 'main', url: 'https://github.com/Reddy062023/MySeleniumFramework'
             }
         }
 
