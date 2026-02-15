@@ -2,38 +2,45 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'  // Jenkins Global Tool name
-        jdk 'JDK17'    // Jenkins Global JDK name
+        maven 'Maven'   // Maven installation name in Jenkins
+        jdk 'JDK17'     // JDK installation name in Jenkins
     }
 
     environment {
         ALLURE_RESULTS = "target/allure-results"
-        ALLURE_REPORT = "target/allure-report"
+        ALLURE_REPORT  = "target/allure-report"
     }
 
     triggers {
-        // GitHub webhook trigger for automatic builds
-        githubPush()
+        githubPush()  // This makes Jenkins automatically trigger on GitHub push
     }
 
     stages {
+        stage('Log Check') {
+            steps {
+                script {
+                    echo "Webhook triggered at: ${new Date()}"
+                }
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git branch: 'main', 
-                    url: 'https://github.com/Reddy062023/MySeleniumFramework',
-                    credentialsId: 'github-token' // Your GitHub PAT in Jenkins
+                    url: 'https://github.com/Reddy062023/MySeleniumFramework.git',
+                    credentialsId: 'github-token' // Your Jenkins PAT credential
             }
         }
 
         stage('Clean') {
             steps {
-                sh 'mvn clean'
+                bat 'mvn clean'   // Use 'bat' for Windows
             }
         }
 
         stage('Build & Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'    // Use 'bat' for Windows
             }
         }
 
